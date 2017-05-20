@@ -1,4 +1,34 @@
-1.From子句
-
-2.别名(AS关键字可选)
+1.别名(AS关键字可选)
   SELECT empno AS id ,ename "Name", sal * 12 "Annual Salary"  FROM emp;
+
+2.查询条件
+  1) 使用>, <, >=, <=, !=, <>, =
+  2) 使用AND，OR关键字;and优先级高于or
+  3) LIKE(模糊查询);WHERE ename LIKE '_A%';
+    %：表示0到多个字符
+    _：标识单个字符
+  4)IN和NOT IN
+  5)BETWEEN…AND…
+  6)IS NULL和IS NOT NULL
+  7)使用ANY和ALL条件
+  8)使用DISTINCT过滤重复
+    SELECT DISTINCT deptno FROM emp;
+  
+3.排序
+  ASC和DESC
+  
+4.聚合函数
+  什么是聚合函数?
+  当需要统计的数据并不能在职员表里直观列出，而是需要根据现有的数据计算得到结果，这种功能可以使用聚合函数来实现.
+  简单概括: 查询时需要做一些数据统计
+  
+  MAX,MIN
+  AVG,SUM
+  COUNT
+  聚合函数忽略空值
+  
+1.5 分组
+  
+  GROUP BY子句
+  HAVING字句: 必须跟在GROUP BY后面，不能单独存在。
+  
