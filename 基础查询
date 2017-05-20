@@ -1,0 +1,4 @@
+1.From子句
+
+2.别名(AS关键字可选)
+  SELECT empno AS id ,ename "Name", sal * 12 "Annual Salary"  FROM emp;
